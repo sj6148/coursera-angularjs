@@ -66,12 +66,12 @@
             <td style="width:60px">Bought:</td>
             <td style="width:30px">{{item.quantity}}</td>
             <td style="width:100px"> {{item.name}}</td>
-            <td style="width:250px"><button class="btn btn-default ms" ng-click="boughtCrl.cancel(item)"><span class="glyphicon glyphicon-remove"></span> Return It</button></td>
+            <td style="width:250px"><button class="btn btn-default btn-sm" ng-click="boughtCrl.cancel(item)"><span class="glyphicon glyphicon-remove"></span> Return It</button></td>
           </tr>
         </table>
         <!-- <ul>
        <li ng-repeat="item in boughtCrl.items">Bought {{item.quantity}} {{item.name}}
-         <button class="btn btn-default ms" ng-click="boughtCrl.cancel(item)"><span class="glyphicon glyphicon-remove" style="color:red"></span> Cancel Purchase</button>
+         <button class="btn btn-default btn-sm" ng-click="boughtCrl.cancel(item)"><span class="glyphicon glyphicon-remove" style="color:red"></span> Cancel Purchase</button>
        </li>
      </ul>
      <div class="emptyMessage" ng-if="boughtCrl.items.length === 0">Nothing bought yet.</div> -->
