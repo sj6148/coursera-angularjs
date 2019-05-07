@@ -32,28 +32,20 @@
   function ShoppingListCheckOffService() {
     var service = this;
 
-    var toBuyItems = [{name:"Apple",quantity:10},
-                      {name:"Grape",quantity:10},
-                    {name:"Milk",quantity:10},
-                  {name:"Pineapple",quantity:10},
-                {name:"Juice",quantity:10},
-              {name:"Water",quantity:10}];
+    var toBuyItems = [];
     var alreadyBoughtItems = [];
 
     var allToBuyItems = ["Apple:10", "Grape:10", "Milk:10", "Pineapple:10", "Juice:10", "Water:1"];
     allToBuyItems.forEach(init);
 
-    // var allToBuyItems = ["Apple:10", "Grape:10", "Milk:10", "Pineapple:10", "Juice:10", "Water:1"];
-    // allToBuyItems.forEach(init);
-    //
-    // function init(value, index, array) {
-    //   var temp = value.split(":");
-    //   toBuyItems.push({
-    //     name: temp[0],
-    //     quantity: temp[1]
-    //   });
-    // }
-    // console.log("toBuyItems has ", toBuyItems.toString());
+    function init(value, index, array) {
+      var temp = value.split(":");
+      toBuyItems.push({
+        name: temp[0],
+        quantity: temp[1]
+      });
+    }
+    console.log("toBuyItems has ", toBuyItems.toString());
 
     service.buyItem = function(itemIndex) {
       alreadyBoughtItems.push(toBuyItems[itemIndex]);
